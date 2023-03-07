@@ -1,23 +1,26 @@
 import React, { useState } from 'react'
+import MyButton from '../../ui/buttons/MyButton/MyButton';
+import SmallHeading from '../../ui/heading/small-heading/SmallHeading';
+import MyInput from '../../ui/input/MyInput';
 
 export default function Login() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   
   return (
-    <div className='login-page'>
-      <h2>Войти</h2>
+    <>
+      <SmallHeading>Войти</SmallHeading>
       <div className="enter-page__form">
-        <input type="text" placeholder='Пользователь'
+        <MyInput type="text" placeholder='Пользователь'
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <input type="password" placeholder='Пароль'
+        <MyInput type="password" placeholder='Пароль'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button>Войти</button>
+        <MyButton>Войти</MyButton>
       </div>
-    </div>
+    </>
   )
 }

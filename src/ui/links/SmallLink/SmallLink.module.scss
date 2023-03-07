@@ -1,0 +1,10 @@
+.SmallLink {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(73, 73, 73);
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}

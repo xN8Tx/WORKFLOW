@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import MyButton from '../../ui/buttons/MyButton/MyButton';
+import SmallHeading from '../../ui/heading/small-heading/SmallHeading';
+import MyInput from '../../ui/input/MyInput';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -7,23 +10,23 @@ export default function Register() {
   
   
   return (
-    <div className='enter-page'>
-      <h2>Регистрация</h2>
+    <>
+      <SmallHeading>Регистрация</SmallHeading>
       <div className="enter-page__form">
-        <input type="text" placeholder='Пользователь'
+        <MyInput type="text" placeholder='Пользователь'
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <input type="password" placeholder='Пароль'
+        <MyInput type="password" placeholder='Пароль'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <input type="password" placeholder='Пароль'
+        <MyInput type="password" placeholder='Пароль'
           value={secondPassword}
           onChange={(e) => setSecondPassword(e.target.value)}
         />
-        <button>Войти</button>
+        <MyButton>Зарегистрироваться</MyButton>
       </div>
-    </div>
+    </>
   )
 }
