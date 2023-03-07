@@ -1,5 +1,5 @@
 import React from 'react'
-import { cl } from './SmallText.module.scss'
+import cl from './SmallText.module.scss'
 
 export default function SmallText({children, ...props}) {
   return (

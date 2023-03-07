@@ -1,0 +1,14 @@
+.MySelector {
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    border: 1px solid rgb(73, 73, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MySelector[data-status="true"] {
+    border: none;
+    background-color: rgb(81, 104, 235);
+}

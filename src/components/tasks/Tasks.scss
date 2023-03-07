@@ -1,0 +1,22 @@
+.tasks-wrapper {
+  display: flex;
+  align-items: center;
+
+  & > .tasks-company {
+    margin-top: 0;
+    width: 40%;
+  }
+}
+
+@media (max-width: 850px) {
+  .tasks-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    & > .tasks-company {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}

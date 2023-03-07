@@ -1,0 +1,17 @@
+.task-company-item {
+  margin-top: 10px;
+  padding: 10px 15px;
+  max-width: 500px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }  
+}
