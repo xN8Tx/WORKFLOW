@@ -6,10 +6,10 @@ import BigHeading from '../../ui/heading/big-heading/BigHeading';
 
 import './TaskItem.scss'
 
-export default function TaskItem() {
-  const [status, setStatus] = useState(false);
+export default function TaskItem({_status, task, date, body}) {
+  const [status, setStatus] = useState(_status);
   const [active, setActive] = useState(false);
-
+  
   return (
     <div className='tasks-item'
       onClick={() => setActive(!active)}
@@ -23,18 +23,18 @@ export default function TaskItem() {
             onClick={() => setStatus(!status)}
           />
           <BigHeading>
-            Title
+            {task}
           </BigHeading>
         </div>
         <div className="tasks-item__date">
           <BigText>
-            Date
+            {date}
           </BigText>
         </div>
       </div>
       <div className="tasks-item__body" data-active={active}>
         <BigText>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut delectus, error quo est adipisci deserunt sint provident ipsam quos dolor praesentium, atque voluptates soluta reprehenderit nulla quaerat officia sunt dolore?
+          {body}
         </BigText>
       </div>
     </div>
